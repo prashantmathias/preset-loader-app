@@ -1,0 +1,7 @@
+<form role="form">
+  <p>Are you sure you want to delete {{ eq.presetName }}?</p>
+  <div class="form-group">
+    <input type="submit" class="btn btn-danger" ng-click="deleteEq()" value="Yes">
+    <button type="button" ng-click="back()" class="btn btn-default">No</button>
+  </div>
+</form>

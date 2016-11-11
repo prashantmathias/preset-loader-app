@@ -1,0 +1,19 @@
+<a class="btn btn-primary" href="/#/create/eq"><span class="glyphicon glyphicon-plus"></span> Create eq</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Title</th>
+    <th>Operations</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="eq in eqs">
+      <td><a ng-href="/#/eq/{{ eq._id }}">{{ eq.presetName }}</a></td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/eq/{{ eq._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+          <a ng-href="/#/eq/{{ eq._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

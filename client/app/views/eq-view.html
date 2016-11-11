@@ -1,0 +1,72 @@
+<ng-include src="'views/eq-nav.html'"></ng-include>
+<h3>{{ eq.presetName }}</h3>
+
+<table class="table table-striped">
+  <thead>
+    <th>Parameters</th>
+    <th>Values</th>
+  </thead>
+  <tbody>
+    <tr ng-controller="EqViewCtrl">
+      <td> Lowband </td>
+      <td>{{ eq.lowBand }}</td>
+    </tr>
+    <tr>
+      <td> Low peak/shelf </td>
+      <td>{{ eq.lowPeakShelf }}</td>
+    </tr>
+    <tr>
+      <td> Low freq (Hz) </td>
+      <td>{{ eq.lowFreq }}</td>
+    </tr>
+    <tr>
+      <td> Low gain </td>
+      <td>{{ eq.lowGain }}</td>
+    </tr>
+    <tr>
+      <td> Low/Mid band </td>
+      <td>{{ eq.lowMidBand }}</td>
+    </tr>
+    <tr>
+      <td> Low/Mid Hi/Low Q </td>
+      <td>{{ eq.lowMidHiLowQ }}</td>
+    </tr>
+    <tr>
+      <td> Low/Mid freq (Hz) </td>
+      <td>{{ eq.lowMidFreq }}</td>
+    </tr>
+    <tr>
+      <td> Low/mid gain </td>
+      <td>{{ eq.lowMidGain }}</td>
+    </tr>
+    <tr>
+      <td> Hi/Mid band </td>
+      <td>{{ eq.hiMidBand }}</td>
+    </tr>
+    <tr>
+      <td> Hi/Mid freq (kHz) </td>
+      <td>{{ eq.hiMidFreq }}</td>
+    </tr>
+    <tr>
+      <td> Hi/Mid gain </td>
+      <td>{{ eq.hiMidGain }}</td>
+    </tr>
+    <tr>
+      <td> Hi band </td>
+      <td>{{ eq.hiBand }}</td>
+    </tr>
+    <tr>
+      <td> Hi peak/shelf </td>
+      <td>{{ eq.hiPeakShelf }}</td>
+    </tr>
+    <tr>
+      <td> Hi freq (kHz) </td>
+      <td>{{ eq.hiFreq }}</td>
+    </tr>
+    <tr>
+      <td> Hi gain </td>
+      <td>{{ eq.hiGain }}</td>
+    </tr>
+
+  </tbody>
+</table>

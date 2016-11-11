@@ -1,0 +1,107 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Title</label>
+    <input type="text" ng-model="eq.presetName" class="form-control" id="title" placeholder="Enter movie title">
+  </div>
+
+<table class="table table-striped">
+  <thead>
+    <th>Parameters</th>
+    <th>Values</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Lowband </td>
+      <td>
+          <input type="text" ng-model="eq.lowBand" class="form-control" id="title" placeholder="{{ eq.lowBand }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low peak/shelf </td>
+      <td>
+          <input type="text" ng-model="eq.lowPeakShelf" class="form-control" id="title" placeholder="{{ eq.lowPeakShelf }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low freq (Hz) </td>
+      <td>
+          <input type="text" ng-model="eq.lowFreq" class="form-control" id="title" placeholder="{{ eq.lowFreq }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low gain </td>
+      <td>
+        <input type="text" ng-model="eq.lowGain" class="form-control" id="title" placeholder="{{ eq.lowGain }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low/Mid band </td>
+      <td>
+        <input type="text" ng-model="eq.lowMidBand" class="form-control" id="title" placeholder="{{ eq.lowMidBand }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low/Mid Hi/Low Q </td>
+      <td>
+        <input type="text" ng-model="eq.lowMidHiLowQ" class="form-control" id="title" placeholder="{{ eq.lowMidHiLowQ }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low/Mid freq (Hz) </td>
+      <td>
+        <input type="text" ng-model="eq.lowMidFreq" class="form-control" id="title" placeholder="{{ eq.lowMidFreq }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Low/mid gain </td>
+      <td>
+        <input type="text" ng-model="eq.lowMidGain" class="form-control" id="title" placeholder="{{ eq.lowMidGain }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi/Mid band </td>
+      <td>
+        <input type="text" ng-model="eq.hiMidBand" class="form-control" id="title" placeholder="{{ eq.hiMidBand }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi/Mid freq (kHz) </td>
+      <td>
+        <input type="text" ng-model="eq.hiMidFreq" class="form-control" id="title" placeholder="{{ eq.hiMidFreq }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi/Mid gain </td>
+      <td>
+        <input type="text" ng-model="eq.hiMidGain" class="form-control" id="title" placeholder="{{ eq.hiMidGain }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi band </td>
+      <td>
+        <input type="text" ng-model="eq.hiBand" class="form-control" id="title" placeholder="{{ eq.hiBand }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi peak/shelf </td>
+      <td>
+        <input type="text" ng-model="eq.hiPeakShelf" class="form-control" id="title" placeholder="{{ eq.hiPeakShelf }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi freq (kHz) </td>
+      <td>
+        <input type="text" ng-model="eq.hiFreq" class="form-control" id="title" placeholder="{{ eq.hiFreq }}">
+      </td>
+    </tr>
+    <tr>
+      <td> Hi gain </td>
+      <td>
+        <input type="text" ng-model="eq.hiGain" class="form-control" id="title" placeholder="{{ eq.hiGain }}">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <input type="submit" class="btn btn-primary" ng-click="saveEq()" value="save">
+</form>
