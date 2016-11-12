@@ -15,7 +15,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
-    RestangularProvider.setBaseUrl('http://localhost:3000');
+    RestangularProvider.setBaseUrl('https://warm-inlet-18237.herokuapp.com');
 
     $routeProvider
       .when('/', {

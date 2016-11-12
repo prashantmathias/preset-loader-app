@@ -23,7 +23,7 @@ app.use('/test',function(req, res, next) {
   next();
 });
 
-mongoose.connect('mongodb://localhost/preset-loader-app');
+mongoose.connect(process.env.MONGOLAB_URI ||'mongodb://localhost/preset-loader-app');
 mongoose.connection.once('open', function() {
 
   app.models = require('./models/index');
@@ -35,5 +35,5 @@ mongoose.connection.once('open', function() {
   });
 
   console.log('Listening on port 3000');
-  app.listen(3000);
+  app.listen(process.env.PORT || 3000);
 });
