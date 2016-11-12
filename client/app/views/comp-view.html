@@ -1,0 +1,35 @@
+<ng-include src="'views/comp-nav.html'"></ng-include>
+<h3>{{ comp.presetName }}</h3>
+
+<table class="table table-striped">
+  <thead>
+    <th>Parameters</th>
+    <th>Values</th>
+  </thead>
+  <tbody>
+    <tr ng-controller="CompViewCtrl">
+      <td> Mode </td>
+      <td>{{ comp.mode }}</td>
+    </tr>
+    <tr>
+      <td> Attack (ms) </td>
+      <td>{{ comp.attack }}</td>
+    </tr>
+    <tr>
+      <td> Release (ms) </td>
+      <td>{{ comp.release }}</td>
+    </tr>
+    <tr>
+      <td> Threshold </td>
+      <td>{{ comp.threshold }}</td>
+    </tr>
+    <tr>
+      <td> Ratio </td>
+      <td>{{ comp.ratio }}:1</td>
+    </tr>
+    <tr>
+      <td> Make Up Gain </td>
+      <td>{{ comp.makeUpGain }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<a class="btn btn-primary" href="/#/create/comp"><span class="glyphicon glyphicon-plus"></span> Create Preset</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Presets</th>
+    <th>Operations</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="comp in comps">
+      <td><a ng-href="/#/comp/{{ comp._id }}">{{ comp.presetName }}</a></td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/comp/{{ comp._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+          <a ng-href="/#/comp/{{ comp._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

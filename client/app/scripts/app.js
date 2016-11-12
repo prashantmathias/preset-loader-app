@@ -48,6 +48,31 @@ angular
         controller: 'EqEditCtrl',
         controllerAs: 'eqEdit'
       })
+      .when('/create/comp', {
+        templateUrl: 'views/comp-add.html',
+        controller: 'CompAddCtrl',
+        controllerAs: 'compAdd'
+      })
+      .when('/comp/:id/delete', {
+        templateUrl: 'views/comp-delete.html',
+        controller: 'CompDeleteCtrl',
+        controllerAs: 'compDelete'
+      })
+      .when('/comp/:id/edit', {
+        templateUrl: 'views/comp-edit.html',
+        controller: 'CompEditCtrl',
+        controllerAs: 'compEdit'
+      })
+      .when('/comp/:id', {
+        templateUrl: 'views/comp-view.html',
+        controller: 'CompViewCtrl',
+        controllerAs: 'compView'
+      })
+      .when('/comp', {
+        templateUrl: 'views/comp.html',
+        controller: 'CompCtrl',
+        controllerAs: 'comp'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -61,4 +86,14 @@ angular
   })
   .factory('Eq', function(EqRestangular) {
     return EqRestangular.service('eq');
+  })
+  .factory('CompRestangular', function(Restangular) {
+    return Restangular.withConfig(function(RestangularConfigurer) {
+      RestangularConfigurer.setRestangularFields({
+        id: '_id'
+      });
+    });
+  })
+  .factory('Comp', function(CompRestangular) {
+    return CompRestangular.service('comp');
   })

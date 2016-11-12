@@ -1,0 +1,75 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Preset Name</label>
+    <input type="text" ng-model="comp.presetName" class="form-control" id="title" placeholder="Enter Preset title">
+  </div>
+
+<table class="table table-striped">
+  <thead>
+    <th>Parameters</th>
+    <th>Values</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Mode </td>
+      <td>
+        <select ng-model="comp.mode" >
+          <option value="Creative">Creative</option>
+          <option value="Agressive">Agressive</option>
+          <option value="Natural">Natural</option>
+          <option value="Opto">Opto</option>
+          <option value="FET">FET</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td> Attack </td>
+      <td>
+          <input type="range" min="1" max="500" step="1" ng-model="comp.attack" class="form-control" id="title" value="{{ comp.attack }}">
+      </td>
+      <td>
+        <output>{{ comp.attack }}(ms)</output>
+      </td>
+    </tr>
+    <tr>
+      <td> Release </td>
+      <td>
+          <input type="range" min="5" max="500" step="1" ng-model="comp.release" class="form-control" id="title" value="{{ comp.release }}">
+      </td>
+      <td>
+        <output>{{ comp.release }}(ms)</output>
+      </td>
+    </tr>
+    <tr>
+      <td> Threshold </td>
+      <td>
+          <input type="range" min="-70" max="0" step="1" ng-model="comp.threshold" class="form-control" id="title" value="{{ comp.threshold }}">
+      </td>
+      <td>
+        <output>{{ comp.threshold }}</output>
+      </td>
+    </tr>
+    <tr>
+      <td> Ratio </td>
+      <td>
+          <input type="range" min="1" max="20" step="1" ng-model="comp.ratio" class="form-control" id="title" value="{{ comp.ratio }}">
+      </td>
+      <td>
+        <output>{{ comp.ratio }} : 1</output>
+      </td>
+    </tr>
+    <tr>
+      <td> Make Up Gain </td>
+      <td>
+          <input type="range" min="0" max="50" step="1" ng-model="comp.makeUpGain" class="form-control" id="title" value="{{ comp.makeUpGain }}">
+      </td>
+      <td>
+        <output>{{ comp.makeUpGain }}</output>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+  <input type="submit" class="btn btn-primary" ng-click="saveComp()" value="save">
+</form>

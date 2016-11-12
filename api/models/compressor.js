@@ -3,11 +3,12 @@ var mongoose = require('mongoose');
 var CompressorSchema = new mongoose.Schema({
   presetName: {
     type: String,
-    required: true
+    required: true,
+    default: "Default"
   },
   mode: {
     type: String,
-    default: "default"
+    default: "FET"
   },
   attack: {
     type: Number,
