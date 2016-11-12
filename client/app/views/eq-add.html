@@ -1,7 +1,7 @@
 <form role="form">
   <div class="form-group">
-    <label for="title" class="control-label">Title</label>
-    <input type="text" ng-model="eq.presetName" class="form-control" id="title" placeholder="Enter movie title">
+    <label for="title" class="control-label">Preset Name</label>
+    <input type="text" ng-model="eq.presetName" class="form-control" id="title" placeholder="Enter Preset title">
   </div>
 
 <table class="table table-striped">
@@ -13,91 +13,136 @@
     <tr>
       <td> Lowband </td>
       <td>
-          <input type="text" ng-model="eq.lowBand" class="form-control" id="title" placeholder="{{ eq.lowBand }}">
+        <select ng-model="eq.lowBand" >
+          <option value="On">On</option>
+          <option value="Off">Off</option>
+        </select>
       </td>
     </tr>
     <tr>
       <td> Low peak/shelf </td>
       <td>
-          <input type="text" ng-model="eq.lowPeakShelf" class="form-control" id="title" placeholder="{{ eq.lowPeakShelf }}">
+        <select ng-model="eq.lowPeakShelf" >
+          <option value="Peak">Peak</option>
+          <option value="Shelf">Shelf</option>
+        </select>
       </td>
     </tr>
     <tr>
-      <td> Low freq (Hz) </td>
+      <td> Low freq </td>
       <td>
-          <input type="text" ng-model="eq.lowFreq" class="form-control" id="title" placeholder="{{ eq.lowFreq }}">
+          <input type="range" min="0" max="250" step="1" ng-model="eq.lowFreq" class="form-control" id="title" placeholder="{{ eq.lowFreq }}">
+      </td>
+      <td>
+        <output>{{ eq.lowFreq }}(Hz)</output>
       </td>
     </tr>
     <tr>
       <td> Low gain </td>
       <td>
-        <input type="text" ng-model="eq.lowGain" class="form-control" id="title" placeholder="{{ eq.lowGain }}">
+        <input type="range" min="-60" max="60" step="1" ng-model="eq.lowGain" class="form-control" id="title" placeholder="{{ eq.lowGain }}">
+      </td>
+      <td>
+        <output>{{ eq.lowGain }}</output>
       </td>
     </tr>
     <tr>
       <td> Low/Mid band </td>
       <td>
-        <input type="text" ng-model="eq.lowMidBand" class="form-control" id="title" placeholder="{{ eq.lowMidBand }}">
+        <select ng-model="eq.lowMidBand" >
+          <option value="On">On</option>
+          <option value="Off">Off</option>
+        </select>
       </td>
     </tr>
     <tr>
       <td> Low/Mid Hi/Low Q </td>
       <td>
-        <input type="text" ng-model="eq.lowMidHiLowQ" class="form-control" id="title" placeholder="{{ eq.lowMidHiLowQ }}">
+        <select ng-model="eq.lowMidHiLowQ" >
+          <option value="Hi">Hi</option>
+          <option value="Low">Low</option>
+        </select>
       </td>
     </tr>
     <tr>
-      <td> Low/Mid freq (Hz) </td>
+      <td> Low/Mid freq  </td>
       <td>
-        <input type="text" ng-model="eq.lowMidFreq" class="form-control" id="title" placeholder="{{ eq.lowMidFreq }}">
+        <input type="range" min="250" max="1500" step="1" ng-model="eq.lowMidFreq" class="form-control" id="title" placeholder="{{ eq.lowMidFreq }}">
+      </td>
+      <td>
+        <output>{{ eq.lowMidFreq }}(Hz)</output>
       </td>
     </tr>
     <tr>
       <td> Low/mid gain </td>
       <td>
-        <input type="text" ng-model="eq.lowMidGain" class="form-control" id="title" placeholder="{{ eq.lowMidGain }}">
+        <input type="range" min="-60" max="60" step="1" ng-model="eq.lowMidGain" class="form-control" id="title" value="{{ eq.lowMidGain }}">
+      </td>
+      <td>
+        <output>{{ eq.lowMidGain }}</output>
       </td>
     </tr>
     <tr>
       <td> Hi/Mid band </td>
       <td>
-        <input type="text" ng-model="eq.hiMidBand" class="form-control" id="title" placeholder="{{ eq.hiMidBand }}">
+        <select ng-model="eq.hiMidBand" >
+          <option value="On">On</option>
+          <option value="Off">Off</option>
+        </select>
       </td>
     </tr>
     <tr>
-      <td> Hi/Mid freq (kHz) </td>
+      <td> Hi/Mid freq </td>
       <td>
-        <input type="text" ng-model="eq.hiMidFreq" class="form-control" id="title" placeholder="{{ eq.hiMidFreq }}">
+        <input type="range" min="1" max="8" step="0.1" ng-model="eq.hiMidFreq" class="form-control" id="title" value="{{ eq.hiMidFreq }}">
+      </td>
+      <td>
+        <output>{{ eq.hiMidFreq }}(kHz)</output>
       </td>
     </tr>
     <tr>
       <td> Hi/Mid gain </td>
       <td>
-        <input type="text" ng-model="eq.hiMidGain" class="form-control" id="title" placeholder="{{ eq.hiMidGain }}">
+        <input type="range" min="-60" max="60" step="1" ng-model="eq.hiMidGain" class="form-control" id="title" value="{{ eq.hiMidGain }}">
+      </td>
+      <td>
+        <output>{{ eq.hiMidGain }}</output>
       </td>
     </tr>
     <tr>
       <td> Hi band </td>
       <td>
-        <input type="text" ng-model="eq.hiBand" class="form-control" id="title" placeholder="{{ eq.hiBand }}">
+        <select ng-model="eq.hiBand" >
+          <option value="On">On</option>
+          <option value="Off">Off</option>
+        </select>
       </td>
     </tr>
     <tr>
       <td> Hi peak/shelf </td>
       <td>
-        <input type="text" ng-model="eq.hiPeakShelf" class="form-control" id="title" placeholder="{{ eq.hiPeakShelf }}">
+        <select ng-model="eq.hiPeakShelf" >
+          <option value="Peak">Peak</option>
+          <option value="Shelf">Shelf</option>
+        </select>
       </td>
     </tr>
     <tr>
-      <td> Hi freq (kHz) </td>
+      <td> Hi freq </td>
       <td>
-        <input type="text" ng-model="eq.hiFreq" class="form-control" id="title" placeholder="{{ eq.hiFreq }}">
+        <input type="range" min="8.0" max="20.0" step="0.1" class="form-control" id="title" ng-model="eq.hiFreq" value="{{ eq.hiFreq }}">
+      </td>
+      <td>
+        <output>{{ eq.hiFreq }}(kHz)</output>
       </td>
     </tr>
-    <tr>
+    <tr >
       <td> Hi gain </td>
       <td>
-        <input type="text" ng-model="eq.hiGain" class="form-control" id="title" placeholder="{{ eq.hiGain }}">
+        <input type="range" min="-60" max="60" step="1" class="form-control" id="title" ng-model="eq.hiGain" value="{{ eq.hiGain }}" >
+      </td>
+      <td>
+        <output>{{ eq.hiGain }}</output>
       </td>
     </tr>
   </tbody>

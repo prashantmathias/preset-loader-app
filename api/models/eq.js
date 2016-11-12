@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var EqSchema = new mongoose.Schema({
   presetName: {
     type: String,
-    required: true
+    required: true,
+    default: "Default"
   },
   lowBand: {
     type: String,
